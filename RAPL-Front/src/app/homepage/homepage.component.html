@@ -1,0 +1,14 @@
+<div>
+    <app-navbar (loginClick)="openLoginPage()"
+    [loggedIn]="loggedIn"
+    [registerd]="registerd"> 
+
+    </app-navbar>
+</div>
+<div *ngIf="showLoginPage && !loggedIn" class="login">
+    <app-login (loginOk)="closeLoginPage()"></app-login>
+</div>
+
+
+
+
