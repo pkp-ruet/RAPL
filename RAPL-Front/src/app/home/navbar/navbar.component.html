@@ -13,7 +13,7 @@
         <a class="nav-link" >Blogs</a>
       </li>
     </ul>
-    <button *ngIf="!loggedIn && !registerd" type="button" class="btn btn-primary" (click)="onLoginClick()">
+    <button *ngIf="!loggedIn && !registerd" type="button" class="btn btn-primary" (click)="openLoginDialog()">
       Login
     </button>
     <button *ngIf="!loggedIn && !registerd" type="button" class="btn btn-primary">

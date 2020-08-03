@@ -1,9 +1,9 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { FormGroup, FormControl, Validators, FormBuilder } from '@angular/forms';
-import { LoginUser } from '../_models/member';
-import { UserService } from '../_services/user.service';
+import { LoginUser } from '../../_models/member';
+import { UserService } from '../../_services/user.service';
 import * as alertify from 'alertifyjs';
-import { AuthService } from '../_services/auth.service';
+import { AuthService } from '../../_services/auth.service';
 
 
 @Component({

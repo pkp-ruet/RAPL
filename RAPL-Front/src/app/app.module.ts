@@ -7,11 +7,14 @@ import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { JwtModule } from '@auth0/angular-jwt';
 import { ButtonsModule } from 'ngx-bootstrap/buttons';
+import { MatDialogModule } from '@angular/material/dialog';
 
 import { AppComponent } from './app.component';
-import { HomepageComponent } from './homepage/homepage.component';
-import { NavbarComponent } from './navbar/navbar.component';
-import { LoginComponent } from './login/login.component';
+import { HomepageComponent } from './home/homepage/homepage.component';
+import { LoginComponent } from './home/login/login.component';
+import { NavbarComponent } from './home/navbar/navbar.component';
+import { LoginDialogComponent } from './home/login-dialog/login-dialog.component';
+
 
 
 @NgModule({
@@ -19,13 +22,15 @@ import { LoginComponent } from './login/login.component';
       AppComponent,
       HomepageComponent,
       NavbarComponent,
-      LoginComponent
+      LoginComponent,
+      LoginDialogComponent
    ],
    imports: [
       BrowserModule,
       HttpClientModule,
       ButtonsModule.forRoot(),
       FormsModule,
+      MatDialogModule,
       BsDropdownModule.forRoot(),
       ReactiveFormsModule,
       AngularFontAwesomeModule,
@@ -43,6 +48,7 @@ import { LoginComponent } from './login/login.component';
    providers: [],
    bootstrap: [
       AppComponent
-   ]
+   ],
+   entryComponents: [LoginDialogComponent]
 })
 export class AppModule { }
