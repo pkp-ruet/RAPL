@@ -8,12 +8,14 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { JwtModule } from '@auth0/angular-jwt';
 import { ButtonsModule } from 'ngx-bootstrap/buttons';
 import { MatDialogModule } from '@angular/material/dialog';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import { MatSelectModule } from '@angular/material';
 
 import { AppComponent } from './app.component';
 import { HomepageComponent } from './home/homepage/homepage.component';
-import { LoginComponent } from './home/login/login.component';
 import { NavbarComponent } from './home/navbar/navbar.component';
 import { LoginDialogComponent } from './home/login-dialog/login-dialog.component';
+import { RegistrationDialogComponent } from './home/registration-dialog/registration-dialog.component';
 
 
 
@@ -22,8 +24,8 @@ import { LoginDialogComponent } from './home/login-dialog/login-dialog.component
       AppComponent,
       HomepageComponent,
       NavbarComponent,
-      LoginComponent,
-      LoginDialogComponent
+      LoginDialogComponent,
+      RegistrationDialogComponent
    ],
    imports: [
       BrowserModule,
@@ -33,6 +35,8 @@ import { LoginDialogComponent } from './home/login-dialog/login-dialog.component
       MatDialogModule,
       BsDropdownModule.forRoot(),
       ReactiveFormsModule,
+      MatFormFieldModule,
+      MatSelectModule,
       AngularFontAwesomeModule,
       BrowserAnimationsModule,
       JwtModule.forRoot({
@@ -49,6 +53,6 @@ import { LoginDialogComponent } from './home/login-dialog/login-dialog.component
    bootstrap: [
       AppComponent
    ],
-   entryComponents: [LoginDialogComponent]
+   entryComponents: [LoginDialogComponent, RegistrationDialogComponent]
 })
 export class AppModule { }

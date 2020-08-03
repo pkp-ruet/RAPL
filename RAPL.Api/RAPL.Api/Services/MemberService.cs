@@ -14,12 +14,12 @@ namespace RAPL.Api.Services
             Context = context;
         }
 
-        public Member CreateMember(Member member)
+        public Member RegisterMember(Member member)
         {
             member.Id = Guid.NewGuid().ToString();
             var totalMember = GetMembers().Count();
             member.UserId = totalMember + 1;
-            Context.CreateMember(member);
+            Context.Register(member);
             return member;
         }
 

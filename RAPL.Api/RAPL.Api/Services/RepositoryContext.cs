@@ -17,7 +17,7 @@ namespace RAPL.Api.Services
             memberRepo = database.GetCollection<Member>(repository.MemberRepo);
         }
 
-        public Member CreateMember(Member member)
+        public Member Register(Member member)
         {
             memberRepo.InsertOne(member);
             return member;

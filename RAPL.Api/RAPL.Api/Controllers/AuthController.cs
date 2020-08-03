@@ -26,10 +26,10 @@ namespace RAPL.Api.Controllers
             _config = config;
         }
 
-        [HttpPost("Create")]
-        public ActionResult<Member> CreateMember(Member member)
+        [HttpPost("Register")]
+        public ActionResult<Member> RegisterMember(Member member)
         {
-            _memberService.CreateMember(member);
+            _memberService.RegisterMember(member);
             return member;
         }
         [HttpPost("Login")]
