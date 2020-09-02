@@ -2,7 +2,10 @@
 @import '../node_modules/font-awesome/css/font-awesome.min.css';
 @import '../node_modules/alertifyjs/build/css/alertify.min.css';
 @import '../node_modules/alertifyjs/build/css/themes/bootstrap.min.css';
-.loginBackground
-{
-    color: turquoise;
-}
+.my-class .mat-dialog-container{
+    height: 400px;
+    width: 600px;
+    border-radius: 10px;
+    background: lightcyan;
+    color: #039be5;
+  }

@@ -11,6 +11,8 @@ import { RegistrationDialogComponent } from '../registration-dialog/registration
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent implements OnInit {
+  loginClicked = false;
+  regClicked = false;
   loggedIn = false;
   registerd = false;
   loggedInUserName: string;
@@ -29,12 +31,18 @@ export class NavbarComponent implements OnInit {
     this.loggedIn = false;
   }
   openLoginDialog() {
+    if (this.loginClicked || this.regClicked) {
+      return;
+    }
+    this.loginClicked = true;
     const dialogRef = this.dialog.open(LoginDialogComponent, {
-      width: '300px',
+      panelClass: 'my-class',
       data: {},
     });
-    dialogRef.updatePosition({ top: '100px', left: '500px' });
+    dialogRef.updatePosition({ top: '10%', left: '40%' });
     dialogRef.afterClosed().subscribe(response => {
+      this.loginClicked=false;
+      this.regClicked=false;
       if(response.data === true) {
           this.loggedIn = true;
           this.loggedInUserName = this.authService.currentMember;
@@ -44,12 +52,18 @@ export class NavbarComponent implements OnInit {
   }
 
   openRegistrationDialog() {
+    if(this.regClicked || this.loginClicked) {
+      return;
+    }
+    this.regClicked = true;
     const dialogRef = this.dialog.open(RegistrationDialogComponent, {
       width: '300px',
       data: {},
     });
-    dialogRef.updatePosition({ top: '100px', left: '500px' });
+    dialogRef.updatePosition({ top: '10%', left: '40%' });
     dialogRef.afterClosed().subscribe(response => {
+      this.loginClicked=false;
+      this.regClicked=false;
       if(response.data === true) {
         this.loggedIn = true;
         this.loggedInUserName = this.authService.currentMember;

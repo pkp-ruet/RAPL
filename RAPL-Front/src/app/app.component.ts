@@ -23,4 +23,8 @@ export class AppComponent implements OnInit {
       this.authService.currentMember = member.username;
     }
   }
+  getUrl()
+  {
+    return 'url(\'https://images.pexels.com/photos/956981/milky-way-starry-sky-night-sky-star-956981.jpeg?cs=srgb&dl=pexels-felix-mittermeier-956981.jpg&fm=jpg\')';
+  }
 }

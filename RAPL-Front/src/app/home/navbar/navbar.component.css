@@ -2,3 +2,6 @@ button
 {
     margin: 10px;
 }
+.btn-primary, .btn-primary:hover, .btn-primary:active, .btn-primary:visited {
+    background-color: #A9A9A9 !important;
+}
