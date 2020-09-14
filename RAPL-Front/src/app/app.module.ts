@@ -16,6 +16,8 @@ import { HomepageComponent } from './home/homepage/homepage.component';
 import { NavbarComponent } from './home/navbar/navbar.component';
 import { LoginDialogComponent } from './home/login-dialog/login-dialog.component';
 import { RegistrationDialogComponent } from './home/registration-dialog/registration-dialog.component';
+import { InAppRootOverlayContainer } from './in-app-root-overlay-container';
+import { OverlayContainer } from '@angular/cdk/overlay';
 
 
 
@@ -49,7 +51,9 @@ import { RegistrationDialogComponent } from './home/registration-dialog/registra
          }
       })
    ],
-   providers: [],
+   providers: [
+      { provide: OverlayContainer, useClass: InAppRootOverlayContainer }
+   ],
    bootstrap: [
       AppComponent
    ],

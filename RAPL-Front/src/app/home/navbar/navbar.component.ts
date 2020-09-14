@@ -36,10 +36,11 @@ export class NavbarComponent implements OnInit {
     }
     this.loginClicked = true;
     const dialogRef = this.dialog.open(LoginDialogComponent, {
-      panelClass: 'my-class',
+      width: '300px',
+      height: '300px',
       data: {},
     });
-    dialogRef.updatePosition({ top: '10%', left: '40%' });
+    dialogRef.updatePosition({ left: '40%' });
     dialogRef.afterClosed().subscribe(response => {
       this.loginClicked=false;
       this.regClicked=false;
@@ -60,7 +61,7 @@ export class NavbarComponent implements OnInit {
       width: '300px',
       data: {},
     });
-    dialogRef.updatePosition({ top: '10%', left: '40%' });
+    dialogRef.updatePosition({ left: '40%' });
     dialogRef.afterClosed().subscribe(response => {
       this.loginClicked=false;
       this.regClicked=false;

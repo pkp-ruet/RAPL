@@ -48,7 +48,7 @@ export class RegistrationDialogComponent implements OnInit {
     });
   }
   cancel() {
-    this.dialogRef.close({data: true});
+    this.dialogRef.close();
   }
   changeDept($event: any) {
 

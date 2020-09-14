@@ -35,3 +35,4 @@ F:\Project_RAPL\RAPL.Api\RAPL.Api\bin\Debug\netcoreapp3.1\Microsoft.IdentityMode
 F:\Project_RAPL\RAPL.Api\RAPL.Api\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
 F:\Project_RAPL\RAPL.Api\RAPL.Api\obj\Debug\netcoreapp3.1\RAPL.Api.csproj.CoreCompileInputs.cache
 F:\Project_RAPL\RAPL.Api\RAPL.Api\obj\Debug\netcoreapp3.1\RAPL.Api.MvcApplicationPartsAssemblyInfo.cache
+F:\Project_RAPL\RAPL.Api\RAPL.Api\obj\Debug\netcoreapp3.1\RAPL.Api.csprojAssemblyReference.cache
