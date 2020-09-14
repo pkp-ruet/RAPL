@@ -37,6 +37,7 @@ register(member: RegMember) {
   return this.http.post(url, bbody, {headers: headers}).pipe(
     map((response: any)=> {
       if(response) {
+      this.currentMember = response.userName;
       const loginUser = new LoginUser();
       loginUser.username = response.userName;
       loginUser.password = response.password;
@@ -49,6 +50,7 @@ register(member: RegMember) {
 logOut() {
   localStorage.removeItem('token');
   localStorage.removeItem('member');
+  this.currentMember = null;
 }
 
 }

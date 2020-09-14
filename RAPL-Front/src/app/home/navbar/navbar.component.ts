@@ -25,6 +25,10 @@ export class NavbarComponent implements OnInit {
               }
 
   ngOnInit() {
+    if (this.authService.currentMember) {
+      this.loggedIn = true;
+      this.loggedInUserName = this.authService.currentMember;
+    }
   }
   logOut() {
     this.authService.logOut();
